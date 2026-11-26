@@ -1,0 +1,65 @@
+# Name shown on the item and in the "Crafted" title.
+name: Voidbreaker
+
+# Custom 3D model from Voidbreaker-pack.zip (resource pack). Set to "" to keep the vanilla mace look.
+model: "voidbreaker:voidbreaker"
+
+# Potion amplifiers: 0 = level I, 1 = level II, 3 = level IV
+effects:
+  regeneration: 1
+  strength: 1
+  jump-boost: 3
+  extra-hearts: 4
+
+# Soul Barrage: right click (no player in view) -> 3 wither skulls
+skulls:
+  cooldown: 15
+  damage: 8.0
+  wither-effect: false
+
+# Telekinesis: right click on a player. Right click again to stop.
+telekinesis:
+  grab-range: 10.0
+  hold-distance: 3.0
+  max-seconds: 30
+
+# Void Judgement: sneak + left click -> thrown mace. Locks all powers for the cooldown.
+judgement:
+  cooldown: 50
+  damage: 14.0
+  speed: 2.2
+  range: 60
+  blindness-seconds: 7
+  zone-radius: 6.0
+  zone-seconds: 8
+  skeletons: 3
+  skeleton-seconds: 30
+
+# Phantom Step: sprint, jump, then right click in the air. Own cooldown.
+phantom:
+  cooldown: 30
+  distance: 9.0
+  rift-radius: 3.0
+  rift-seconds: 6
+  slow-amplifier: 2
+
+# Void Rift: jump, then left click in the air (while rising, not falling). Locks all powers.
+rift:
+  cooldown: 60
+  range: 30
+  radius: 7.0
+  seconds: 8
+  damage: 2.0
+
+# Sounds: "sound.id,volume,pitch". Resource-pack sounds work too, e.g. "voidbreaker:kill,1,1"
+sounds:
+  hit: ["entity.wither.hurt,0.6,0.5", "item.mace.smash_ground,0.7,0.6"]
+  kill: ["entity.player.attack.crit,1.0,0.5", "item.trident.hit,1.0,0.5", "entity.wither.death,0.5,1.9"]
+  skulls: ["entity.wither.shoot,1.0,1.0"]
+  tk-start: ["entity.enderman.teleport,1.0,0.5", "entity.warden.sonic_charge,0.5,1.5"]
+  tk-stop: ["entity.wither.break_block,0.5,1.5"]
+  throw: ["item.trident.throw,1.4,0.6", "entity.lightning_bolt.thunder,0.8,1.3"]
+  flight: ["item.trident.riptide_3,0.6,0.6"]
+  impact: ["entity.lightning_bolt.impact,1.5,0.8", "entity.generic.explode,1.2,0.6", "entity.wither.spawn,0.5,1.5"]
+  phantom: ["entity.enderman.teleport,1.0,0.6", "entity.evoker.cast_spell,0.8,0.7"]
+  rift: ["block.end_portal.spawn,0.8,1.2", "entity.enderman.scream,0.6,0.5"]

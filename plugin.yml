@@ -1,0 +1,12 @@
+name: Voidbreaker
+main: com.voidbreaker.Voidbreaker
+version: 1.0.0
+api-version: "26.3"
+description: Voidbreaker, the dark mace
+commands:
+  mace:
+    description: Voidbreaker admin command
+    usage: /mace <give|recipe|reload|powers>
+permissions:
+  voidbreaker.admin:
+    default: op
