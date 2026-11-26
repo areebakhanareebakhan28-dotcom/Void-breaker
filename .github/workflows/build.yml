@@ -18,7 +18,7 @@ jobs:
             mv Voidbreaker.java src/main/java/com/voidbreaker/
             mv plugin.yml config.yml src/main/resources/
           fi
-      - run: mvn -B package
+      - run: mvn -B -q package
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ github.run_number }}
